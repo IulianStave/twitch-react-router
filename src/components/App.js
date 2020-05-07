@@ -8,22 +8,14 @@ import StreamDelete from './streams/StreamDelete';
 import StreamList from './streams/StreamList';
 import StreamShow from './streams/StreamShow';
 
-
-// class App extends React.Component {
-
-//   render() {
-//     return <div>Hello</div>;
-//   }
-// };
+import Header from './Header';
 
 const App = () => {
-  //extractedPath.comtains(path) without exact keyword
-  // when exact keyword is present => equal is used for comparison
-
   return (
-    <div>
+    <div className="ui containter">
       <BrowserRouter>
         <div>
+          <Header />
           <Route path="/" exact component={StreamList} />
           <Route path="/streams/new" exact component={StreamCreate} />
           <Route path="/streams/edit" exact component={StreamEdit} />
